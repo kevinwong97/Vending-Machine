@@ -1,0 +1,143 @@
+[s3603055@csitprdap01 A21]$ valgrind --track-origins=yes ./vm stock.dat coins.dat
+==51434== Memcheck, a memory error detector
+==51434== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
+==51434== Using Valgrind-3.12.0 and LibVEX; rerun with -h for copyright info
+==51434== Command: ./vm stock.dat coins.dat
+==51434==
+Main Menu:
+1. Display Items
+2. Purchase Items
+3. Save and Exit
+Administrator-Only Menu:
+4. Add Item
+5. Remove Item
+6. Display Coins
+7. Reset Stock
+8. Reset Coins
+9. Abort Program
+Select your option (1-9):1
+
+Items Menu
+
+ID    | Name               | Available | Price
+-----------------------------------------------
+I0002 | Apple Pie          | 19        | $ 3.00
+I0004 | Lemon Meringue Pie | 20        | $ 3.00
+I0005 | Lemon Tart         | 12        | $ 3.75
+I0001 | Meat Pie           | 50        | $ 3.50
+I0003 | Lemon Cheesecake   | 10        | $ 4.00
+
+Main Menu:
+1. Display Items
+2. Purchase Items
+3. Save and Exit
+Administrator-Only Menu:
+4. Add Item
+5. Remove Item
+6. Display Coins
+7. Reset Stock
+8. Reset Coins
+9. Abort Program
+Select your option (1-9):2
+
+Purchase Item
+-------------
+Please enter the id of the item you wish to purchase: I0002
+You have selected "Apple Pie - Delicious Stewed Apple in a Yummy Pastry envelope". This will cost you $3.00.
+Please hand over the money - type in the value of each note/coin in cents.
+Press enter on a new and empty line to cancel this purchase.
+You still need to give us $3.00:100
+You still need to give us $2.00:500
+Thank you. Here is your Apple Pie, and your change of $3.00: $1 $2
+Please come back soon.
+
+Main Menu:
+1. Display Items
+2. Purchase Items
+3. Save and Exit
+Administrator-Only Menu:
+4. Add Item
+5. Remove Item
+6. Display Coins
+7. Reset Stock
+8. Reset Coins
+9. Abort Program
+Select your option (1-9):4
+
+Add Item
+-------------
+
+This new meal item will have the Item id of I0006.
+Enter the item name: Chocolate bar
+Enter the item description: chocolate
+Enter the price for this item: 2.00
+This item "Chocolate bar - chocolate" has now been added to the menu.
+
+Main Menu:
+1. Display Items
+2. Purchase Items
+3. Save and Exit
+Administrator-Only Menu:
+4. Add Item
+5. Remove Item
+6. Display Coins
+7. Reset Stock
+8. Reset Coins
+9. Abort Program
+Select your option (1-9):6
+
+Coins Summary
+-------------
+Denomination | Count
+
+5 cents      | 20
+10 cents     | 40
+20 cents     | 3
+50 cents     | 5
+1 dollar     | 30
+2 dollar     | 18
+5 dollar     | 6
+10 dollar    | 3
+
+Main Menu:
+1. Display Items
+2. Purchase Items
+3. Save and Exit
+Administrator-Only Menu:
+4. Add Item
+5. Remove Item
+6. Display Coins
+7. Reset Stock
+8. Reset Coins
+9. Abort Program
+Select your option (1-9):5
+
+Remove Item
+-------------
+
+Enter the item id of the item to remove from the menu: I0006
+"I0006 - Chocolate bar" has been removed from the system.
+Main Menu:
+1. Display Items
+2. Purchase Items
+3. Save and Exit
+Administrator-Only Menu:
+4. Add Item
+5. Remove Item
+6. Display Coins
+7. Reset Stock
+8. Reset Coins
+9. Abort Program
+Select your option (1-9):3
+
+Goodbye.
+
+==51434==
+==51434== HEAP SUMMARY:
+==51434==     in use at exit: 0 bytes in 0 blocks
+==51434==   total heap usage: 18 allocs, 18 frees, 4,368 bytes allocated
+==51434==
+==51434== All heap blocks were freed -- no leaks are possible
+==51434==
+==51434== For counts of detected and suppressed errors, rerun with: -v
+==51434== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
